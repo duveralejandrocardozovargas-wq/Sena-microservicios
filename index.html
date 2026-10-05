@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de zapatos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 0 16px;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    h1, h2 {
+      color: #1a365d;
+    }
+
+    .caja {
+      background: #fff;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    button {
+      background: #2b6cb0;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    #factura {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tienda de zapatos</h1>
+
+  <section class="caja">
+    <h2>Catálogo</h2>
+    <div id="lista-productos"></div>
+  </section>
+
+  <section class="caja">
+    <h2>Carrito</h2>
+    <div id="carrito"></div>
+    <button id="btn-generar-factura" type="button">Generar factura</button>
+  </section>
+
+  <section class="caja">
+    <h2>Factura</h2>
+    <div id="factura"></div>
+  </section>
+
+  <script src="ProductoModelo.js"></script>
+  <script src="ApiServicio.js"></script>
+  <script src="facturacion.js"></script>
+  <script src="Controlador.js"></script>
+</body>
+</html>
